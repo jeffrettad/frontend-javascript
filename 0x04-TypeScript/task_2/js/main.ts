@@ -52,3 +52,23 @@ function createEmployee(salary: number | string): Director | Teacher {
   }
 }
 
+// 6. Creating functions specific to employees
+// From Director and Teacher classes from previous example 
+
+// Type predicate to check if the employee is a Director
+function isDirector(employee: Director | Teacher): employee is Director {
+  return (employee as Director).workDirectorTasks !== undefined;
+}
+
+// 7. String literal types
+// String literal type
+type Subjects = "Math" | "History";
+
+// Function to teach class
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === "Math") {
+    return "Teaching Math";
+  } else {
+    return "Teaching History";
+  }
+}
