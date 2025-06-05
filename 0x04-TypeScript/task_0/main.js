@@ -1,3 +1,6 @@
+
+
+
 "use strict";
 const student1 = {
     firstName: 'John',
