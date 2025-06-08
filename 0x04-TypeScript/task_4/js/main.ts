@@ -14,8 +14,8 @@ export const react = new ReactClass();
 
 // Export teacher object
 export const cTeacher: Teacher = {
-  firstName: 'John',
-  lastName: 'Doe',
+    firstName: 'Guillaume',
+  lastName: 'Salva',
   experienceTeachingC: 10,
 };
 

@@ -1,35 +1,23 @@
 // Interface for MajorCredits with branding
-interface MajorCredits {
+export interface MajorCredits {
+  _majorCreditBrand: void;
   credits: number;
-  readonly _majorBrand: 'major';
 }
 
 // Interface for MinorCredits with branding
-interface MinorCredits {
+export interface MajorCredits {
+  _majorCreditBrand: void;
   credits: number;
-  readonly _minorBrand: 'minor';
 }
 
 // Function to sum MajorCredits
-function sumMajorCredits(subject1: MajorCredits, subject2: MajorCredits): MajorCredits {
-  return {
-    credits: subject1.credits + subject2.credits,
-    _majorBrand: 'major'
-  };
+export function sumMajorCredits(subject1: MajorCredits, subject2: MajorCredits): MajorCredits {
+  return { credits: subject1.credits + subject2.credits } as MajorCredits;
 }
 
 // Function to sum MinorCredits
-function sumMinorCredits(subject1: MinorCredits, subject2: MinorCredits): MinorCredits {
-  return {
-    credits: subject1.credits + subject2.credits,
-    _minorBrand: 'minor'
-  };
+export function sumMinorCredits(subject1: MinorCredits, subject2: MinorCredits): MinorCredits {
+  return { credits: subject1.credits + subject2.credits } as MinorCredits;
 }
 
 // Export for usage/testing
-export {
-  MajorCredits,
-  MinorCredits,
-  sumMajorCredits,
-  sumMinorCredits
-};
