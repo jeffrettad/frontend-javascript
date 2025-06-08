@@ -1,3 +1,4 @@
+
 // 1. Let's build a Teacher interface
 const teacher3: (Teacher: string){
   firstName: 'Peter',
@@ -120,4 +121,19 @@ function createEmployee(salary: number | string): Director | Teacher {
     return new Director();
   }
 }
+export interface Teacher {
+  readonly firstName: string;
+  readonly lastName: string;
+}
 
+export interface Teacher {
+}
+export interface Teacher {
+  fullTimeEmployee: boolean;
+  location: string;
+}
+export interface Teacher {
+  yearsOfExperience?: number;}
+  
+  export interface Teacher {
+  [propName: string]: any}
