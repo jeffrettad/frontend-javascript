@@ -22,11 +22,11 @@ export function executeWork(employee: Director | Teacher): string {
   if (isDirector(employee)) {
     return employee.workDirectorTasks();
   } else {
-    return (employee as Teacher).workTeacherTasks();
+    return employee.workTeacherTasks();
   }
 }
 
-// For manual testing (not required by checker):
+// For testing only
 console.log(executeWork(createEmployee(200)));
 console.log(executeWork(createEmployee(1000)));
 
