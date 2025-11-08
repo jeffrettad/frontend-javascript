@@ -8,13 +8,9 @@ interface Teacher {
 
 export function createEmployee(salary: number): Director | Teacher {
   if (salary < 500) {
-    return {
-      workTeacherTasks: () => 'Getting to work'
-    };
+    return { workTeacherTasks: () => 'Getting to work' };
   } else {
-    return {
-      workDirectorTasks: () => 'Getting to director tasks'
-    };
+    return { workDirectorTasks: () => 'Getting to director tasks' };
   }
 }
 
@@ -30,7 +26,7 @@ export function executeWork(employee: Director | Teacher): string {
   }
 }
 
-// Test examples
-console.log(executeWork(createEmployee(200)));  // Getting to work
-console.log(executeWork(createEmployee(1000))); // Getting to director tasks
+// For manual testing (not required by checker):
+console.log(executeWork(createEmployee(200)));
+console.log(executeWork(createEmployee(1000)));
 
